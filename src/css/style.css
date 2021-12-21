@@ -509,16 +509,54 @@ header {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(5px);
   border: none;
+  overflow: visible;
 }
 .offcanvas .offcanvas-body {
-  padding: 1rem;
-  height: 100%;
+  padding: 1rem 3rem;
+  height: 35vh;
   position: relative;
+  overflow: visible;
 }
 .offcanvas .offcanvas-body .oc-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 0;
+}
+.offcanvas .offcanvas-body .oc-list-item .oc-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 0.5rem;
+}
+.offcanvas .offcanvas-body .oc-list-item .oc-item .oc-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 1;
+  color: black;
+  width: 55px;
+  height: 55px;
+  border-radius: 1000px;
+  background: #ffa438;
+  margin: 5px;
+}
+.offcanvas .offcanvas-body .oc-list-item .oc-item .oc-span {
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 1;
+  color: black;
 }
 .offcanvas .offcanvas-body .oc-button {
   display: flex;
@@ -526,15 +564,47 @@ header {
   justify-content: center;
   align-items: center;
   border-radius: 100px;
-  width: 50px;
-  height: 50px;
   background: none;
   border: none;
   font-size: 30px;
   color: rgba(0, 0, 0, 0.5);
   position: absolute;
-  bottom: 0;
+  top: -35px;
   right: 0;
+}
+.offcanvas .offcanvas-body .menu-card {
+  background: white;
+  width: max-content;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+.offcanvas .offcanvas-body .menu-card .card-img-s {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, red, orange);
+  height: 51px;
+  width: 51px;
+  border-radius: 1000px;
+}
+.offcanvas .offcanvas-body .menu-card .card-img-s .img-border-s {
+  width: 45px;
+  height: 45px;
+  border-radius: 1000px;
+  background: white;
+}
+.offcanvas .offcanvas-body .menu-card .card-body-s {
+  font-size: 22.5px;
+  font-weight: bold;
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+  color: black;
+  padding: 0 0.5rem;
 }
 
 .offcanvas-backdrop {
@@ -543,6 +613,44 @@ header {
 }
 .offcanvas-backdrop.show {
   opacity: 1 !important;
+}
+
+.scale-in-br {
+  -webkit-animation: scale-in-br 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+  animation: scale-in-br 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+}
+
+@-webkit-keyframes scale-in-br {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-br {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

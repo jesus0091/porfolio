@@ -56,30 +56,84 @@ header {
     background: rgba($lightness, 0.7);
     backdrop-filter: blur(5px);
     border: none;
+    overflow: visible;
 
     .offcanvas-body {
-        padding: 1rem;
-        height: 100%;
+        padding: 1rem 3rem;
+        height: 35vh;
         position: relative;
+        overflow: visible;
 
         .oc-list-item {
+            @include m-display (flex, row, center, center);
+            flex-wrap: wrap;
             list-style: none;
             padding: 0;
             margin: 0;
+
+            .oc-item {
+                @include m-display (flex, column, center, center);
+                width: 50%;
+                padding: 0.5rem;
+
+
+                .oc-link {
+                    @include m-display (flex, row, center, center);
+                    @include m-text($s-text+4, normal, 1, 1, $darkness);
+                    width: $size-button + 10px;
+                    height: $size-button + 10px;
+                    border-radius: 1000px;
+                    background: $orange;
+                    margin: 5px
+
+                }
+
+                .oc-span {
+                    @include m-text($s-text - 4px, normal, 1, 1, $darkness)
+                }
+
+            }
         }
 
         .oc-button {
             @include m-display (flex, row, center, center);
             border-radius: 100px;
-            width: $size-button+5px;
-            height: $size-button+5px;
+
             background: none;
             border: none;
             font-size: 30px;
             color: rgba($darkness, 0.5);
             position: absolute;
-            bottom: 0;
+            top: -$size-button + 10px;
             right: 0;
+        }
+
+        .menu-card {
+            background: $lightness;
+            width: max-content;
+            border-radius: 50px;
+            @include m-display(flex, row, center, center);
+            padding: .5rem;
+
+            .card-img-s  {
+                    @include m-display(flex, row, center, center);
+                    background: linear-gradient(45deg, rgb(255, 0, 0), orange);
+                    height: $size-button + 6px;
+                    width: $size-button + 6px;
+                    border-radius: 1000px;
+
+                    .img-border-s {
+                        width: $size-button;
+                        height: $size-button;
+                        border-radius: 1000px;
+                        background: $lightness;
+                    }
+            }      
+                
+            .card-body-s{
+                @include m-text($s-text*1.5, bold, 1.25, 0.5px, $darkness );
+                padding: 0 0.5rem;
+            }
         }
 
     }
@@ -93,3 +147,42 @@ header {
         opacity: 1 !important;
     }
 }
+
+.scale-in-br {
+	-webkit-animation: scale-in-br 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+	        animation: scale-in-br 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+}
+
+ @-webkit-keyframes scale-in-br {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-br {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+      opacity: 1;
+    }
+  }
+  
