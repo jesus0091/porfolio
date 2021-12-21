@@ -8,5 +8,13 @@
   "author": "",
   "license": "ISC",
   "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesus0091/porfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jesus0091/porfolio/issues"
+  },
+  "homepage": "https://github.com/jesus0091/porfolio#readme",
   "description": ""
 }

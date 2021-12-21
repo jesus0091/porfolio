@@ -1,4 +1,6 @@
-$width-item: 20rem;
+
+
+
 .h-home-2 {
     height: 250px;
 }
@@ -6,7 +8,6 @@ $width-item: 20rem;
     @include m-display(flex, row, center, start);
     transform: translateY(-30%);
     overflow: hidden;
-    
     width: 100%;
 
     .slider,

@@ -7,6 +7,7 @@ header {
     width: 100%;
     background: $darkness;
     z-index: 999;
+    transition: 1s ease background;
 }
 
 .navbar-container-s {
@@ -54,6 +55,7 @@ header {
     margin: 10px;
     background: rgba($lightness, 0.7);
     backdrop-filter: blur(5px);
+    border: none;
 
     .offcanvas-body {
         padding: 1rem;
@@ -69,8 +71,8 @@ header {
         .oc-button {
             @include m-display (flex, row, center, center);
             border-radius: 100px;
-            width: $size-button;
-            height: $size-button;
+            width: $size-button+5px;
+            height: $size-button+5px;
             background: none;
             border: none;
             font-size: 30px;
@@ -84,7 +86,7 @@ header {
 }
 
 .offcanvas-backdrop {
-    background: rgba($darkness, 0.5) !important;
+    background: rgba($darkness, 0.7) !important;
     backdrop-filter: blur(5px) !important;
 
     &.show {

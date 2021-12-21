@@ -7,6 +7,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  list-style: none;
 }
 
 /****************************************/
@@ -15,6 +17,12 @@
 /****************************************/
 /*               MIXINS                 */
 /****************************************/
+/****************************************/
+/*               TEXT                   */
+/****************************************/
+/****************************************/
+/*             CAROUSEL                 */
+/****************************************/
 /*_________________ TEXT _______________________*/
 /*_________________ BUTTONS ____________________*/
 .btn-styler {
@@ -22,22 +30,29 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 35px;
+  font-size: 20px;
   font-weight: bold;
   line-height: 1;
   letter-spacing: 2px;
   color: #ffa438;
   border: 3px solid #ffa438;
   border-radius: 50px;
-  height: 55px;
+  height: 34px;
   width: max-content;
   padding: 0.25rem 0.75rem;
-  margin: 10px 0;
+  margin: 10px 0 20px;
   background: none;
   cursor: pointer;
 }
 .btn-styler span {
   margin-bottom: 5px;
+}
+
+.btn-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 /*_________________ SCROLLBAR __________________*/
@@ -79,6 +94,22 @@ body {
 .color-lightness {
   background-color: #ffffff;
   color: #000000;
+}
+.color-lightness header {
+  background: white;
+}
+.color-lightness header .offcanvas-backdrop {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(5px) !important;
+}
+.color-lightness header .offcanvas-backdrop.show {
+  opacity: 1 !important;
+}
+.color-lightness header .offcanvas {
+  background: rgba(255, 164, 56, 0.5);
+}
+.color-lightness header .offcanvas .oc-button {
+  color: black;
 }
 
 body {
@@ -122,7 +153,7 @@ p {
 }
 .wrapper-carousel .slider .slide-item,
 .wrapper-carousel .slide .slide-item {
-  width: 20rem;
+  width: 10rem;
   overflow: hidden;
   border-radius: 10px;
   margin: 0 0.5rem;
@@ -304,44 +335,45 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 }
 .h-home .title-presentation {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   position: relative;
 }
 .h-home .title-presentation .title-headline {
-  font-size: 35px;
+  font-size: 20px;
   font-weight: normal;
   line-height: 1;
   letter-spacing: 2px;
   color: #ffa438;
-  margin: 5px 0;
+  margin: 3px 0;
   text-align: start;
 }
 .h-home .title-presentation .title-headline span:nth-child(2) {
   color: white;
 }
 .h-home .title-presentation .title-first {
-  font-size: 75px;
+  font-size: 30px;
   font-weight: bold;
   line-height: 1;
   letter-spacing: 2px;
   color: white;
   text-align: start;
-  margin: 5px 0;
+  margin: 3px 0;
   width: max-content;
 }
 .h-home .title-presentation .title-under-line {
-  font-size: 35px;
+  font-size: 20px;
   font-weight: bold;
   line-height: 1;
   letter-spacing: 2px;
   color: #ffa438;
   text-align: start;
-  margin: 10px 0;
+  margin: 3px 0;
   padding: 0;
   font-weight: normal;
 }
@@ -369,33 +401,39 @@ p {
   top: calc(40px/2);
   transform: translateX(-102%);
 }
-
-.avatarImage {
+.h-home .avatar-image {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
 }
-.avatarImage img {
-  width: 70%;
+.h-home .avatar-image img {
+  width: 80%;
 }
 
-.nav-link {
-  text-decoration: none;
-  color: white !important;
+.a-about .a-about-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.a-about .a-title {
-  font-size: 50px;
+.a-about .a-about-description .a-title {
+  font-size: 34.5px;
   font-weight: bold;
-  color: orange;
-  letter-spacing: 1px;
-  text-align: start;
+  line-height: 1.15;
+  letter-spacing: 1.5px;
+  color: #ffa438;
+  text-align: center;
 }
-.a-about .a-text {
-  text-align: start;
+.a-about .a-about-description .a-text {
+  text-align: center;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.25;
+  letter-spacing: 1.5px;
+  color: white;
+  margin-bottom: 0.5rem;
 }
-
-.gridSkills {
+.a-about .grid-skills {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
@@ -407,8 +445,8 @@ p {
   border-radius: 20px;
   height: 100%;
 }
-.gridSkills img {
-  width: 100px;
+.a-about .grid-skills img {
+  width: 100%;
 }
 
 header {
@@ -418,6 +456,7 @@ header {
   width: 100%;
   background: black;
   z-index: 999;
+  transition: 1s ease background;
 }
 
 .navbar-container-s {
@@ -469,6 +508,7 @@ header {
   margin: 10px;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(5px);
+  border: none;
 }
 .offcanvas .offcanvas-body {
   padding: 1rem;
@@ -486,19 +526,19 @@ header {
   justify-content: center;
   align-items: center;
   border-radius: 100px;
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   background: none;
   border: none;
   font-size: 30px;
   color: rgba(0, 0, 0, 0.5);
   position: absolute;
-  bottom: 0rem;
-  right: 0rem;
+  bottom: 0;
+  right: 0;
 }
 
 .offcanvas-backdrop {
-  background: rgba(0, 0, 0, 0.5) !important;
+  background: rgba(0, 0, 0, 0.7) !important;
   backdrop-filter: blur(5px) !important;
 }
 .offcanvas-backdrop.show {

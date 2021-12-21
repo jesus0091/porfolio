@@ -59,10 +59,10 @@
                 aria-labelledby="offcanvasBottomLabel">
                 <div class="offcanvas-body small">
                     <ul class="oc-list-item">
-                        <li class="oc-item"><a class="oc-link" href="">INICIO</a></li>
-                        <li class="oc-item"><a class="oc-link" href="">ACERCA</a></li>
-                        <li class="oc-item"><a class="oc-link" href="">PROYECTOS</a></li>
-                        <li class="oc-item"><a class="oc-link" href="">CONTACTO</a></li>
+                        <li class="oc-item"><a class="oc-link" href="#home">INICIO</a></li>
+                        <li class="oc-item"><a class="oc-link" href="#about">ACERCA</a></li>
+                        <li class="oc-item"><a class="oc-link" href="#works">PROYECTOS</a></li>
+                        <li class="oc-item"><a class="oc-link" href="#contact">CONTACTO</a></li>
                     </ul>
                     <button type="button" class="oc-button" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fas fa-arrow-circle-down"></i></button>
                 </div>
@@ -77,21 +77,23 @@
         
     </header>
     <!-- Home -->
-    <section class="h-home panel" data-color="darkness">
-        <div class="container row">
-            <div class="title-presentation col-6">
-                <p class="title-headline"><span>Hola,</span><span> soy</span></p>
-                <h1 class="title-first hover-this">Jesús Hernández</h1>
-                <h2 class="title-under-line">Desarrollador <span>FrontEnd</span></h2>
-                <button class="btn-styler hover-this">
-                    <span>contacto</span>
-                </button>
-                <div class="number-one">
-                    <span>01</span>
+    <section class="h-home panel" data-color="darkness" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 order-2 title-presentation ">
+                    <p class="title-headline"><span>Hola,</span><span> soy</span></p>
+                    <h1 class="title-first hover-this">Jesús Hernández</h1>
+                    <h2 class="title-under-line">Desarrollador <span>FrontEnd</span></h2>
+                    <button class="btn-styler hover-this">
+                        <span>contacto</span>
+                    </button>
+                    <div class="d-none number-one">
+                        <span>01</span>
+                    </div>
                 </div>
-            </div>
-            <div class="avatarImage col-6">
-                <img src="src/image/avatarImage.png" alt="">
+                <div class="col-md-6 avatar-image ">
+                    <img src="src/image/avatarImage.png" alt="">
+                </div>
             </div>
         </div>
     </section>
@@ -126,22 +128,22 @@
         </div>
     </section>
     <!-- About -->
-    <section class="panel overflow-hidden" data-color="darkness">
+    <section class="panel overflow-hidden" data-color="darkness" id="about">
         <div class="container a-about">
             <div class="row">
-                <div class="col-6">
+                <div class="col-md-6 a-about-description">
                     <h2 class="a-title hover-this">Acerca de mi</h2>
                     <p class="a-text">Agrimensor e Ingeniero Geodesta recibido haciendo la transición al Universo IT.
                         Inicié realizando cursos on-line de forma autodidacta hasta que decidí certificarme en
                         CODERHOUSE como Desarrollador FrontEnd, para poder impulsarme dentro del rubro.
                         Siempre en busca de enriquecer mis conocimientos profesionales y además para aportar a cualquier
                         organización el logro de sus objetivos</p>
-                    <button class="btn-styler hover-this">
+                    <button class="d-none btn-styler hover-this">
                         <span>resumen</span>
                     </button>
                 </div>
-                <div class="col-6">
-                    <div class="gridSkills">
+                <div class="col-md-6">
+                    <div class="grid-skills">
                         <img src="src/image/HTML.png" alt="">
                         <img src="src/image/CSS.png" alt="">
                         <img src="src/image/JAVASCRIPT.png" alt="">
@@ -154,10 +156,15 @@
                     </div>
                 </div>
             </div>
+            <div class=" btn-mobile">
+                <button class="btn-styler hover-this">
+                    <span>resumen</span>
+                </button>
+            </div>
         </div>
     </section>
     <!-- Works -->
-    <section class="panel" data-color="lightness">
+    <section class="panel" data-color="lightness" id="works">
         <h2 class="hover-this">Works</h2>
     </section>
     <!-- Process -->
@@ -165,7 +172,7 @@
         <h2 class="hover-this">Process</h2>
     </section>
     <!-- Contact -->
-    <section class="c-05" data-color="darkness">
+    <section class="c-05" data-color="darkness" id="contact">
         <div class="contact-style">
             <div class="contact container">
                 <h2 class="hover-this">Contacto</h2>
@@ -176,7 +183,7 @@
                 </div>
             </div>
         </div>
-        <footer class="footer-style">
+        <footer class="footer-style overflow-hidden">
             <ul class="container footer-items">
                 <li>
                     <p>JESÚS<span>HERNÁNDEZ</span></p>

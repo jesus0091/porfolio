@@ -6,6 +6,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    list-style: none;
 }
 
 /****************************************/
@@ -13,9 +15,7 @@
 /****************************************/
 
 $darkness: rgba(0 0 0 / 1);
-
 $lightness: rgba(255 255 255 / 1);
-
 $orange: rgba(255 164 56 / 1);
 
 /****************************************/
@@ -35,4 +35,22 @@ $orange: rgba(255 164 56 / 1);
     line-height: $height;
     letter-spacing: $spacing;
     color: $color;
+}
+
+/****************************************/
+/*               TEXT                   */ 
+/****************************************/
+
+$s-text-supertitle: 30px;
+$s-text-title: 20px;
+$s-text-subtitle: 18px;
+$s-text: 15px;
+
+/****************************************/
+/*             CAROUSEL                 */ 
+/****************************************/
+
+$width-item: 10rem ;
+@media (min-width: 992px){
+    $width-item: 20rem;
 }
