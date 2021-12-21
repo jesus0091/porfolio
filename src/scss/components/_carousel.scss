@@ -1,0 +1,56 @@
+$width-item: 20rem;
+.h-home-2 {
+    height: 250px;
+}
+.wrapper-carousel {
+    @include m-display(flex, row, center, start);
+    transform: translateY(-30%);
+    overflow: hidden;
+    
+    width: 100%;
+
+    .slider,
+    .slide {
+        @include m-display(flex, row, center, start);
+
+        .slide-item {
+            width: $width-item;
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 0 0.5rem;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .slide {
+        animation: slideshow 20s linear infinite;
+    }
+
+}
+.slider::before, .slider::after {
+    height: 100%;
+    width: 45%;
+    position: absolute;
+    content: "";
+    background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 2;
+  }
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+  .slider::after {
+    right:0;
+    top:0;
+    transform: rotateZ(180deg);
+  }
+@keyframes slideshow {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

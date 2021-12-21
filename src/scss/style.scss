@@ -1,0 +1,23 @@
+/*_________________ GENERAL ____________________*/
+@import 'base/general';
+
+/*_________________ TEXT _______________________*/
+@import 'base/text-style';
+
+/*_________________ BUTTONS ____________________*/
+@import 'base/buttons';
+
+/*_________________ SCROLLBAR __________________*/
+@import 'base/scrollbar';
+
+/*_________________ CHANGE BACKG _______________*/
+@import 'components/background-color';
+
+/*_________________ MOUSEOVER __________________*/
+@import 'components/carousel';
+@import 'components/mouseover';
+@import 'components/footer';
+@import 'components/views/home';
+@import 'components/views/about';
+
+@import 'components/menu';

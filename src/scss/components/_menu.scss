@@ -1,0 +1,93 @@
+$size-button: 45px;
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $darkness;
+    z-index: 999;
+}
+
+.navbar-container-s {
+    @include m-display (flex, row, stretch, center);
+    width: 100%;
+    padding: 0.5rem;
+
+    .navbar-button {
+        @include m-display (flex, row, center, center);
+        background: none;
+        border: none;
+        color: $orange;
+        border-radius: 100px;
+        width: $size-button;
+        height: $size-button;
+
+    }
+
+    .social-media {
+        @include m-display (flex, row, space-between, center);
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+
+        .s-media-item {
+            @include m-display (flex, row, center, center);
+            border-radius: 100px;
+            width: $size-button;
+            height: $size-button;
+
+
+            .s-m-link {
+                text-decoration: none;
+                color: $orange;
+            }
+        }
+    }
+
+
+}
+
+.offcanvas {
+    border-radius: 10px;
+    margin: 10px;
+    background: rgba($lightness, 0.7);
+    backdrop-filter: blur(5px);
+
+    .offcanvas-body {
+        padding: 1rem;
+        height: 100%;
+        position: relative;
+
+        .oc-list-item {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .oc-button {
+            @include m-display (flex, row, center, center);
+            border-radius: 100px;
+            width: $size-button;
+            height: $size-button;
+            background: none;
+            border: none;
+            font-size: 30px;
+            color: rgba($darkness, 0.5);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+    }
+}
+
+.offcanvas-backdrop {
+    background: rgba($darkness, 0.5) !important;
+    backdrop-filter: blur(5px) !important;
+
+    &.show {
+        opacity: 1 !important;
+    }
+}

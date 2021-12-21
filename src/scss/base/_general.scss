@@ -1,0 +1,38 @@
+/****************************************/
+/*               RESET                  */ 
+/****************************************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/****************************************/
+/*               COLORS                 */ 
+/****************************************/
+
+$darkness: rgba(0 0 0 / 1);
+
+$lightness: rgba(255 255 255 / 1);
+
+$orange: rgba(255 164 56 / 1);
+
+/****************************************/
+/*               MIXINS                 */ 
+/****************************************/
+
+@mixin m-display ($display, $direction, $eje-x, $eje-y){
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $eje-x;
+    align-items: $eje-y;
+}
+
+@mixin m-text ($size, $weight, $height, $spacing, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+    letter-spacing: $spacing;
+    color: $color;
+}

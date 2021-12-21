@@ -1,0 +1,48 @@
+body {
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    transition: all 1s ease;
+    font-family: sans-serif;
+}
+
+.panel {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* colours */
+.color-darkness {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.color-lightness {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+
+
+
+body {
+    text-align: center;
+    font-size: 120%;
+    line-height: 1.618;
+}
+
+h1,
+h2 {
+    font-size: 3em;
+    letter-spacing: -0.05em;
+    line-height: 1.1;
+}
+
+p {
+    max-width: 30em;
+    margin-bottom: 1.618em;
+}

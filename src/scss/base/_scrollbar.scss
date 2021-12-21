@@ -1,0 +1,16 @@
+
+/*--Soporte Google Chrome--*/
+body {
+    &::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: orange;
+        border-radius: 100px;
+    }
+}

@@ -1,0 +1,16 @@
+.btn-styler {
+    @include m-display (flex, row, center, center);
+    @include m-text (35px, bold, 1, 2px, $orange);
+    border: 3px solid $orange;
+    border-radius: 50px;
+    height: 55px;
+    width: max-content;
+    padding: 0.25rem 0.75rem;
+    margin: 10px 0;
+    background: none;
+    cursor: pointer;
+
+    span {
+        margin-bottom: 5px;
+    }
+}
