@@ -23,66 +23,11 @@
     &:hover {
         .back {
             visibility: visible;
-            
+
         }
     }
 }
 
-.c-05 {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-
-.contact-style {
-    background: #191919;
-    width: 100%;
-    margin-bottom: 4rem;
-    
-
-    .contact {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 4rem 0;
-
-        h2{
-            letter-spacing: 2px;
-        }
-
-        .contact-card {
-            position: relative;
-            
-
-            p {
-                margin: 5px 20px;
-                text-align: end;
-            }
-
-            p:nth-child(1) {
-                font-size: 35px;
-                color: orange;
-                letter-spacing: 2px;
-                font-weight: bold;
-                line-height: 1;
-            }
-
-            &::after {
-                position: absolute;
-                top: 0;
-                right: 0;
-                content: '';
-                width: 5px;
-                height: 100%;
-                background: orange;
-
-            }
-        }
-    }
-}
 
 
 .footer-style {

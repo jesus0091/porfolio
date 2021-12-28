@@ -1,0 +1,69 @@
+.c-05 {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.contact-style {
+    width: 100%;
+    margin-bottom: 4rem;
+    transition: color .5s;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: #191919;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .5s;
+        z-index: -1;
+    }
+
+    .contact {
+
+        @include m-display(flex, column, space-between, center);
+        flex-wrap: wrap;
+        padding: 4rem 0;
+
+        .contact-title{
+            @include m-text($s-text-supertitle * 1.5, 900, 1.15, 1.75px, transparent);
+            -webkit-text-stroke: 1px $lightness;
+            transition: .5s color;
+        }
+
+        .contact-card {
+            position: relative;
+            @include m-text ( $s-text, normal, 1.15, 1, $lightness);
+
+            p {
+                margin: 7px auto;
+                text-align: center;
+            }
+
+            p:nth-child(1) {
+                @include m-text($s-text * 1.15 , 500, 1.15, 1px, $orange);
+            }
+        }
+    }
+    &:hover{
+
+        &::before {
+            transform: scaleX(1);
+            transform-origin: right;
+        }
+
+        .contact {
+
+            .contact-title {
+                color: $lightness;
+            }
+
+        }
+    }
+}

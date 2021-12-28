@@ -52,11 +52,12 @@ header {
 
 .offcanvas {
     border-radius: 10px;
-    margin: 10px;
+    margin: 20px;
     background: rgba($lightness, 0.7);
     backdrop-filter: blur(5px);
     border: none;
-    overflow: visible;
+    // overflow: visible;
+    transition: 0.5s ease all;
 
     .offcanvas-body {
         padding: 1rem 3rem;

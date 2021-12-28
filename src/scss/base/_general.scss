@@ -10,41 +10,45 @@
     list-style: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /****************************************/
 /*               COLORS                 */ 
 /****************************************/
 
-$darkness: rgba(0 0 0 / 1);
-$lightness: rgba(255 255 255 / 1);
-$orange: rgba(255 164 56 / 1);
+$darkness:  rgba(0 0 0 / 1)        ;
+$lightness: rgba(255 255 255 / 1)  ;
+$orange:    rgba(255 164 56 / 1)   ;
 
 /****************************************/
 /*               MIXINS                 */ 
 /****************************************/
 
-@mixin m-display ($display, $direction, $eje-x, $eje-y){
-    display: $display;
-    flex-direction: $direction;
-    justify-content: $eje-x;
-    align-items: $eje-y;
+@mixin m-display ($display, $direction, $eje-x, $eje-y) {
+    display:         $display   ;
+    flex-direction:  $direction ;
+    justify-content: $eje-x     ;
+    align-items:     $eje-y     ;
 }
 
 @mixin m-text ($size, $weight, $height, $spacing, $color) {
-    font-size: $size;
-    font-weight: $weight;
-    line-height: $height;
-    letter-spacing: $spacing;
-    color: $color;
+    font-size:       $size      ;
+    font-weight:     $weight    ;
+    line-height:     $height    ;
+    letter-spacing:  $spacing   ;
+    color:           $color     ;
 }
 
 /****************************************/
 /*               TEXT                   */ 
 /****************************************/
 
-$s-text-supertitle: 30px;
-$s-text-title: 20px;
-$s-text-subtitle: 18px;
-$s-text: 15px;
+$s-text-supertitle:   30px  ;
+$s-text-title:        20px  ;
+$s-text-subtitle:     18px  ;
+$s-text:              15px  ;
 
 /****************************************/
 /*             CAROUSEL                 */ 
