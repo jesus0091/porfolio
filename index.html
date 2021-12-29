@@ -33,6 +33,8 @@
     <!---- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!---- Data AOS -->
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <!---- Stylce CSS -->
     <link rel="stylesheet" href="src/css/style.css" />
     <!---------------------------------------------------------------------->
@@ -43,7 +45,7 @@
 <body class="overflow-x-hidden">
     <div id="cursor"></div>
     <header> 
-        <nav> <!-- Menu Mobile -->
+        <nav class="d-lg-none"> <!-- Menu Mobile -->
             <div class="navbar-container-s">
                 <button class="navbar-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
                     aria-controls="offcanvasBottom">
@@ -66,25 +68,25 @@
                     <div class="oc-panel">
                         <ul class="oc-list-item">
                             <li class="oc-item">
-                                <a class="oc-link" href="#home">
+                                <a class="oc-link oc-link-1" href="#home">
                                     <span><i class="fas fa-house-user"></i></span>
                                 </a>
                                 <span class="oc-span">INICIO</span>
                             </li>
                             <li class="oc-item">
-                                <a class="oc-link" href="#about">
+                                <a class="oc-link oc-link-2" href="#about">
                                     <span><i class="far fa-address-card"></i></span>
                                 </a>
                                 <span class="oc-span">ACERCA</span>
                             </li>
                             <li class="oc-item">
-                                <a class="oc-link" href="#works">
+                                <a class="oc-link oc-link-3" href="#works">
                                     <span><i class="fas fa-briefcase"></i></span>
                                 </a>
                                 <span class="oc-span">PROYECTOS</span>
                             </li>
                             <li class="oc-item">
-                                <a class="oc-link" href="#contact">
+                                <a class="oc-link oc-link-4" href="#contact">
                                     <span><i class="far fa-comment-alt"></i></span>
                                 </a>
                                 <span class="oc-span">CONTACTO</span>
@@ -93,7 +95,18 @@
                     </div>
                 </div>
             </div>
-        </nav>        
+        </nav>
+        <div class="menu-desktop d-none d-lg-flex container">
+            <a class="m-brand" href="#home">
+                <img src="src/image/logo.svg" alt="">
+            </a>
+            <ul class="m-list">
+                <li class="m-item hover-this"><a class="m-link" href="#home">INICIO</a></li>
+                <li class="m-item hover-this"><a class="m-link" href="#about">ACERCA</a></li>
+                <li class="m-item hover-this"><a class="m-link" href="#works">PROYECTOS</a></li>
+                <li class="m-item hover-this"><a class="m-link" href="#contact">CONTACTO</a></li>
+            </ul>
+        </div>
     </header>
     <!-- Home -->
     <section class="h-home panel" data-color="darkness" id="home">
@@ -204,7 +217,7 @@
     </section>
     <!-- Process -->
     <section class="panel" data-color="darkness">
-        <h2 class="hover-this"></h2>
+        <h2 class="hover-this">Progress</h2>
     </section>
     <!-- Contact -->
     <section class="c-panel overflow-hidden" data-color="darkness" id="contact">
@@ -258,6 +271,7 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <!-- jsSheet -->
     <script src="src/js/index.js"></script>
+    
 </body>
 
 </html>
