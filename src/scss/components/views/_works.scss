@@ -1,60 +1,61 @@
-$size-before-w: 65vh;
+.s-w {
+    @include m-display(flex, column, center, center);
 
-// #works {
-//     position: relative;
+    .s-w-title {
+        @include m-text ($s-text-supertitle, bold, 1.5, 1.5px, $orange);
 
-//     &::before {
-//         content: '';
-//         position: absolute;
-//         width: $size-before-w;
-//         height: $size-before-w;
-//         right: 0;
-//         top: calc(50%-10vh);
-//         transform: translateX(50%);
-//         border: 18px dotted rgba($orange, 0.1);
-//         border-radius: 1000px;
-//         z-index: -1;
-//     }
-//     &::after {
-//         content: '';
-//         position: absolute;
-//         width: $size-before-w/2;
-//         height: $size-before-w/2;
-//         right: 0;
-//         top: calc(50% - 5vh);
-//         transform: translateX(60%);
-//         border: 10px dotted rgba($darkness, 0.05);
-//         border-radius: 1000px;
-//         z-index: -1;
-//     }
-// }
+    }
 
+    .s-w-grid {
+        @include m-display(flex, row, center, center);
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+        max-width: 800px;
+        box-sizing: content-box;
 
-// .w-works {
+        .s-w-card {
+            width: 48%;
+            height: 20vh;
+            @include m-display(flex, column, center, center);
+            border-radius: 7px;
+            background: rgba($orange, 0.1);
+            position: relative;
+            // transition: 2s ease all;
+            
 
-//     .w-title {
-//         @include m-text($s-text-supertitle * 1.15, bold, 1.15, 1.5px, $orange);
-//             text-align: center;
-//     }
+            h3 {
+                font-size: $s-text;
+                text-align: center
+            }
 
-//     .w-works-cards {
-//         display: grid;
-//         grid-gap: 10px;
-//         grid-template-columns: repeat(2, 1fr);
-//         grid-template-rows: repeat(2, 1fr);
+            ul {
+                @include m-display(flex, row, end, center);
+                align-self: flex-end;
+                padding: 0;
+                margin: 0;
+                position: absolute;
+                bottom: 0;
 
-//         .w-card {
-//             @include m-display(flex, column, center, center);
-//             min-height: 20vh;
-//             background: rgba($orange, 0.3);
-//             backdrop-filter: blur(5px);
-//             border-radius: 10px;
+                li {
+                    padding: .5rem;
+                }
+            }
 
-//             h3 {
-//                 @include m-text($s-text, normal, 1.15, 1.5px, $darkness);
-//             }
+            &:hover {
+                background: linear-gradient(45deg, $lightness -10%, $orange 50%, $color-red 180%);
+                transition: 2s ease all;
+            }
+        }
 
-//         }
-//     }
+        .w-c-1,
+        .w-c-3 {
+            transform: translateY(40%);
+        }
+    }
+}
 
-// }
+.panel-int {
+    @include m-display(flex, row, center, center);
+    height: 100vh;
+}

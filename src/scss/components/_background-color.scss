@@ -22,7 +22,7 @@ body {
 
 .color-lightness {
     background-color: #ffffff;
-    color: #000000;
+    color: #000000 !important;
 
     header {
         background: $lightness;
@@ -45,6 +45,12 @@ body {
 
             .oc-button {
                 color: rgba($orange, 1);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .m-link {
+                color:red;
             }
         }
     }
