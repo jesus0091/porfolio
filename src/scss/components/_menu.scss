@@ -54,7 +54,7 @@ header {
     overflow: visible;
     background: none;
     height: 45vh;
-    transition: .75s ease all;
+    transition: .5s ease all;
     
     .offcanvas-body {
         @include m-display (flex, column, stretch, start);

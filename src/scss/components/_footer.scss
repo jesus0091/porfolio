@@ -3,7 +3,7 @@
 .navbar-brand-img {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     position: relative;
     
     .back {
@@ -33,7 +33,8 @@
 .footer-style {
     background: #191919;
     width: 100%;
-    padding: 4rem 0;
+    padding: 4rem 0 .75rem;
+    height: 30%;
 
     ul {
         padding: 0;
@@ -59,5 +60,7 @@
 }
 
 .copyright {
+    @include m-text($s-text * 0.75, 700, 1.15, 1px, rgba($lightness, 0.5));
+    text-transform: uppercase;
     text-align: center;
 }

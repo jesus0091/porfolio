@@ -130,11 +130,6 @@ h2 {
   line-height: 1.1;
 }
 
-p {
-  max-width: 30em;
-  margin-bottom: 1.618em;
-}
-
 /*_________________ MOUSEOVER __________________*/
 .h-home-2 {
   height: 200px;
@@ -171,7 +166,8 @@ p {
   animation: slideshow 20s linear infinite;
 }
 
-.slider::before, .slider::after {
+.slider::before,
+.slider::after {
   height: 100%;
   width: 45%;
   position: absolute;
@@ -241,7 +237,7 @@ p {
 .navbar-brand-img {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   position: relative;
 }
 .navbar-brand-img .back {
@@ -263,7 +259,8 @@ p {
 .footer-style {
   background: #191919;
   width: 100%;
-  padding: 4rem 0;
+  padding: 4rem 0 0.75rem;
+  height: 30%;
 }
 .footer-style ul {
   padding: 0;
@@ -286,6 +283,12 @@ p {
 }
 
 .copyright {
+  font-size: 11.25px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
   text-align: center;
 }
 
@@ -408,15 +411,16 @@ p {
 }
 
 .c-05 {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: end;
+  align-items: center;
 }
 
 .contact-style {
   width: 100%;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
   transition: color 0.5s;
   position: relative;
 }
@@ -536,7 +540,7 @@ header {
   overflow: visible;
   background: none;
   height: 45vh;
-  transition: 0.75s ease all;
+  transition: 0.5s ease all;
 }
 .offcanvas .offcanvas-body {
   display: flex;

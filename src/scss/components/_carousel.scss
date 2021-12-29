@@ -1,6 +1,7 @@
 .h-home-2 {
     height: 200px;
 }
+
 .wrapper-carousel {
     @include m-display(flex, row, center, start);
     transform: translateY(-30%);
@@ -22,33 +23,42 @@
             }
         }
     }
+
     .slide {
         animation: slideshow 20s linear infinite;
     }
 
 }
-.slider::before, .slider::after {
+
+.slider::before,
+.slider::after {
     height: 100%;
     width: 45%;
     position: absolute;
     content: "";
     background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
     z-index: 2;
-  }
-  .slider::before {
+}
+
+.slider::before {
     left: 0;
     top: 0;
-  }
-  .slider::after {
-    right:0;
-    top:0;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
     transform: rotateZ(180deg);
-  }
+}
+
 @keyframes slideshow {
+
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-100%);
     }
+
 }
