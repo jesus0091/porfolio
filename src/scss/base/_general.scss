@@ -1,7 +1,7 @@
 /****************************************/
-/*               RESET                  */ 
+/*               RESET                  */
 /****************************************/
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,46 +15,56 @@ html {
 }
 
 /****************************************/
-/*               COLORS                 */ 
+/*               COLORS                 */
 /****************************************/
 
-$darkness:  rgba(0 0 0 / 1)        ;
-$lightness: rgba(255 255 255 / 1)  ;
-$orange:    rgba(255 164 56 / 1)   ;
+$darkness: rgba(0 0 0 / 1);
+$lightness: rgba(255 255 255 / 1);
+$orange: rgba(255 164 56 / 1);
 
 /****************************************/
-/*               MIXINS                 */ 
+/*               MIXINS                 */
 /****************************************/
 
 @mixin m-display ($display, $direction, $eje-x, $eje-y) {
-    display:         $display   ;
-    flex-direction:  $direction ;
-    justify-content: $eje-x     ;
-    align-items:     $eje-y     ;
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $eje-x;
+    align-items: $eje-y;
 }
 
 @mixin m-text ($size, $weight, $height, $spacing, $color) {
-    font-size:       $size      ;
-    font-weight:     $weight    ;
-    line-height:     $height    ;
-    letter-spacing:  $spacing   ;
-    color:           $color     ;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+    letter-spacing: $spacing;
+    color: $color;
 }
 
 /****************************************/
-/*               TEXT                   */ 
+/*               TEXT                   */
 /****************************************/
 
-$s-text-supertitle:   30px  ;
-$s-text-title:        20px  ;
-$s-text-subtitle:     18px  ;
-$s-text:              15px  ;
+$s-text-supertitle: 30px;
+$s-text-title: 20px;
+$s-text-subtitle: 18px;
+$s-text: 15px;
 
-/****************************************/
-/*             CAROUSEL                 */ 
-/****************************************/
-
-$width-item: 10rem ;
-@media (min-width: 992px){
-    $width-item: 20rem;
+@if expr {
+    
 }
+@media (min-width: 992px) {
+
+    $s-text-supertitle: 70px;
+    $s-text-title: 30px;
+    $s-text-subtitle: 25px;
+    $s-text: 16px;
+
+}
+
+/****************************************/
+/*             CAROUSEL                 */
+/****************************************/
+
+$width-item: 10rem;
+

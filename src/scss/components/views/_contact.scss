@@ -1,4 +1,4 @@
-.c-05 {
+.c-panel {
     min-height: 80vh;
     display: flex;
     flex-direction: column;
@@ -11,6 +11,8 @@
     margin-bottom: 5rem;
     transition: color .5s;
     position: relative;
+    background: #191919;
+    z-index: 2;
 
     &::before {
         content: '';
@@ -19,7 +21,7 @@
         height: 100%;
         left: 0;
         top: 0;
-        background: #191919;
+        background: linear-gradient(45deg,  darken($orange, 50%), darken($orange, 80%));
         transform: scaleX(0);
         transform-origin: left;
         transition: transform .5s;
@@ -32,7 +34,7 @@
         flex-wrap: wrap;
         padding: 4rem 0;
 
-        .contact-title{
+        .contact-title {
             @include m-text($s-text-supertitle * 1.5, 800, 1.15, 1.75px, transparent);
             -webkit-text-stroke: 1px $lightness;
             transition: .5s color;
@@ -40,7 +42,7 @@
 
         .contact-card {
             position: relative;
-            @include m-text ( $s-text, normal, 1.15, 1, $lightness);
+            @include m-text ($s-text, normal, 1.15, 1, $lightness);
 
             p {
                 margin: 7px auto;
@@ -48,11 +50,46 @@
             }
 
             p:nth-child(1) {
-                @include m-text($s-text * 1.15 , 500, 1.15, 1px, $orange);
+                @include m-text($s-text * 1.15, 500, 1.15, 1px, $orange);
             }
         }
+
+        @media (min-width: 992px) {
+            @include m-display(flex, row, space-between, center);
+
+            .contact-title {
+                @include m-text($s-text-supertitle * 2, 800, 1.15, 1.75px, transparent);
+            }
+
+            .contact-card {
+                position: relative;
+                @include m-text ($s-text * 1.5, normal, 1.15, 1, $lightness);
+                padding-right: 1rem;
+
+                p {
+                    margin: 7px auto;
+                    text-align: right;
+                }
+
+                p:nth-child(1) {
+                    @include m-text($s-text * 2, 500, 1.15, 1px, $orange);
+                }
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 5px;
+                    height: 100%;
+                    background: $orange;
+                    right: 0;
+                    top: 0;
+                }
+            }
+
+        }
     }
-    &:hover{
+
+    &:hover {
 
         &::before {
             transform: scaleX(1);

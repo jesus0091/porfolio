@@ -12,6 +12,7 @@ header {
 
 .navbar-container-s {
     @include m-display (flex, row, stretch, center);
+    @include m-text( $s-text + 4px, normal, 1, 1, $orange);
     width: 100%;
     padding: 0.5rem;
 
@@ -23,7 +24,6 @@ header {
         border-radius: 100px;
         width: $size-button;
         height: $size-button;
-
     }
 
     .social-media {
@@ -39,14 +39,12 @@ header {
             width: $size-button;
             height: $size-button;
 
-
             .s-m-link {
                 text-decoration: none;
                 color: $orange;
             }
         }
     }
-
 }
 
 .offcanvas {
@@ -83,7 +81,6 @@ header {
             width: 100%;
             border-radius: 10px;
             overflow: hidden
-
         }
 
         .oc-list-item {
@@ -95,28 +92,24 @@ header {
             padding: 1.25rem;
             margin: 0;
             
-
             .oc-item {
                 @include m-display (flex, column, center, center);
                 width: 50%;
                 padding: 0.5rem;
 
-
                 .oc-link {
                     @include m-display (flex, row, center, center);
-                    @include m-text($s-text+4, normal, 1, 1, $darkness);
+                    @include m-text($s-text+4px, normal, 1, 1, $darkness);
                     width: $size-button + 10px;
                     height: $size-button + 10px;
                     border-radius: 1000px;
                     background: $orange;
                     margin: 5px
-
                 }
 
                 .oc-span {
                     @include m-text($s-text - 4px, normal, 1, 1, $darkness)
                 }
-
             }
         }
 
@@ -139,42 +132,3 @@ header {
         opacity: 1 !important;
     }
 }
-
-.scale-in-br {
-	-webkit-animation: scale-in-br 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-	        animation: scale-in-br 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-}
-
- @-webkit-keyframes scale-in-br {
-    0% {
-      -webkit-transform: scale(0);
-              transform: scale(0);
-      -webkit-transform-origin: 100% 100%;
-              transform-origin: 100% 100%;
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-transform-origin: 100% 100%;
-              transform-origin: 100% 100%;
-      opacity: 1;
-    }
-  }
-  @keyframes scale-in-br {
-    0% {
-      -webkit-transform: scale(0);
-              transform: scale(0);
-      -webkit-transform-origin: 100% 100%;
-              transform-origin: 100% 100%;
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-transform-origin: 100% 100%;
-              transform-origin: 100% 100%;
-      opacity: 1;
-    }
-  }
-  

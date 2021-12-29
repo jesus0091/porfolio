@@ -8,8 +8,7 @@
     overflow: hidden;
     width: 100%;
 
-    .slider,
-    .slide {
+    .slider{
         @include m-display(flex, row, center, start);
 
         .slide-item {
@@ -21,10 +20,15 @@
             img {
                 width: 100%;
             }
+
+            @media (min-width: 992px) {
+                    width: $width-item * 1.5;
+            }
         }
     }
 
     .slide {
+        @include m-display(flex, row, center, start);
         animation: slideshow 20s linear infinite;
     }
 
@@ -61,4 +65,10 @@
         transform: translateX(-100%);
     }
 
+}
+
+@media (min-width: 992px) {
+    .slide-item {
+        width: $width-item * 3;
+    }
 }

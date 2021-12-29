@@ -44,7 +44,7 @@
 
             span {
                 font-size: 280px;
-                color: #e19c4d18;
+                color: #e19c4d3b;
                 position: relative;
                 text-align: end;
                 line-height: 1;
@@ -61,6 +61,24 @@
             height: 2px;
             top: calc(40px/2);
             transform: translateX(-102%);
+        }
+
+        @media (min-width: 992px) {
+
+            @include m-display(flex, column, center, start);
+            
+            .title-headline {
+                @include m-text($s-text-title * 2 , normal, 1, 2px, $orange);
+            }
+    
+            .title-first {
+                @include m-text($s-text-supertitle * 2, bold, 1, 2px, $lightness);
+            }
+    
+            .title-under-line {
+                @include m-text($s-text-title * 2, bold, 1, 2px, $orange);
+            }
+    
         }
 
     }

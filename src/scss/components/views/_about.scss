@@ -2,15 +2,16 @@
 
     .a-about-description {
         @include m-display(flex, column, center, center);
+        margin-bottom: 1rem;
 
         .a-title {
-            @include m-text($s-text-supertitle*1.15, bold, 1.15, 1.5px, $orange);
+            @include m-text($s-text-supertitle * 1.15, bold, 1.15, 1.5px, $orange);
             text-align: center;
         }
     
         .a-text {
             text-align: center;
-            @include m-text($s-text, normal, 1.25, 1.5px, $lightness);
+            @include m-text($s-text, normal, 1.25, .5px, $lightness);
             margin-bottom: 0.5rem;
         }
     
@@ -31,6 +32,43 @@
         img {
             width: 100%;
         }
+    }
+
+    @media (min-width: 992px) {
+        .a-about-description {
+            @include m-display(flex, column, center, start);
+    
+            .a-title {
+                @include m-text($s-text-supertitle * 2, bold, 1.15, 1.5px, $orange);
+                text-align: left;
+                margin-bottom: 1rem;
+            }
+        
+            .a-text {
+                text-align: left;
+                @include m-text($s-text+5px, normal, 1.25, .5px, $lightness);
+                margin-bottom: 1rem;
+            }
+        
+        }
+        .grid-skills {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 1fr;
+            justify-items: center;
+            align-items: center;
+            padding: 2rem;
+            background-color: rgba(255 255 255 / 0.1);
+            border-radius: 20px;
+            height: 100%;
+    
+    
+            img {
+                max-width: 100px;
+            }
+        }
+        
     }
 
 }

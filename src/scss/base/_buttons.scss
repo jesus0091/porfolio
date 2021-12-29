@@ -14,6 +14,11 @@
     span {
         margin-bottom: 5px;
     }
+
+    @media (min-width: 992px) {
+        @include m-text ($s-text-title * 1.75, bold, 1, 2px, $orange);
+        height: (($s-text-title * 1.75) + 16px);
+    }
 }
 
 .btn-mobile {

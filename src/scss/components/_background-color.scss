@@ -37,7 +37,11 @@ body {
         }
 
         .offcanvas-body {
-            background: rgba($orange, 0.5);
+            
+            .oc-panel {
+                background: rgba($orange, 0.5);
+
+            }
 
             .oc-button {
                 color: rgba($orange, 1);
@@ -45,17 +49,3 @@ body {
         }
     }
 }
-
-body {
-    text-align: center;
-    font-size: 120%;
-    line-height: 1.618;
-}
-
-h1,
-h2 {
-    font-size: 3em;
-    letter-spacing: -0.05em;
-    line-height: 1.1;
-}
-

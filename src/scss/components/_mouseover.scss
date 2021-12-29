@@ -1,45 +1,45 @@
-@media (min-width: 768px){
+@media (min-width: 992px) {
 
   body {
-      position: relative;
-      cursor: none;
+    position: relative;
+    cursor: none;
   }
-  
+
   #cursor {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      border-radius: 50px;
-      background: #ffffff;
-      pointer-events: none;
-      transform: translate(-100%, -100%);
-      mix-blend-mode: difference;
-      transform-origin: 80% 80%;
-      transition: transform 0.3s ease-in-out;
-      animation: borderAnim 1s linear infinite;
-      animation-name: none;
-      z-index: 10;
-    }
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background: #ffffff;
+    pointer-events: none;
+    transform: translate(-100%, -100%);
+    mix-blend-mode: difference;
+    transform-origin: 80% 80%;
+    transition: transform 0.3s ease-in-out;
+    animation: borderAnim 1s linear infinite;
+    animation-name: none;
+    z-index: 10;
+  }
 }
 
-  
-  
-  
-  
-  @keyframes borderAnim {
-    0% {
-      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    }
-    25%{
-      border-radius: 64% 36% 72% 28% / 35% 60% 40% 65%;
-    }
-    50% {
-      border-radius: 46% 54% 38% 62% / 66% 38% 62% 34%;
-    }
-    75%{
-        border-radius: 64% 36% 72% 28% / 35% 60% 40% 65%;
-      }
-100% {
-        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-      }
+@keyframes borderAnim {
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   }
+
+  25% {
+    border-radius: 64% 36% 72% 28% / 35% 60% 40% 65%;
+  }
+
+  50% {
+    border-radius: 46% 54% 38% 62% / 66% 38% 62% 34%;
+  }
+
+  75% {
+    border-radius: 64% 36% 72% 28% / 35% 60% 40% 65%;
+  }
+
+  100% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+}
