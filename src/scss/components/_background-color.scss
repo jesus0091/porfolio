@@ -36,11 +36,11 @@ body {
             }
         }
 
-        .offcanvas {
+        .offcanvas-body {
             background: rgba($orange, 0.5);
 
             .oc-button {
-                color: rgba($darkness, 1);
+                color: rgba($orange, 1);
             }
         }
     }

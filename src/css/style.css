@@ -109,11 +109,11 @@ body {
 .color-lightness header .offcanvas-backdrop.show {
   opacity: 1 !important;
 }
-.color-lightness header .offcanvas {
+.color-lightness header .offcanvas-body {
   background: rgba(255, 164, 56, 0.5);
 }
-.color-lightness header .offcanvas .oc-button {
-  color: black;
+.color-lightness header .offcanvas-body .oc-button {
+  color: #ffa438;
 }
 
 body {
@@ -442,7 +442,7 @@ p {
 }
 .contact-style .contact .contact-title {
   font-size: 45px;
-  font-weight: 900;
+  font-weight: 800;
   line-height: 1.15;
   letter-spacing: 1.75px;
   color: transparent;
@@ -531,16 +531,17 @@ header {
 }
 
 .offcanvas {
-  border-radius: 10px;
-  margin: 20px;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(5px);
   border: none;
-  transition: 0.5s ease all;
+  overflow: visible;
+  background: none;
+  height: 40vh;
+  padding: 20px;
 }
 .offcanvas .offcanvas-body {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
   padding: 1rem 3rem;
-  height: 35vh;
   position: relative;
   overflow: visible;
 }
@@ -591,12 +592,14 @@ header {
   justify-content: center;
   align-items: center;
   border-radius: 100px;
+  width: 35px;
+  height: 35px;
   background: none;
   border: none;
   font-size: 30px;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.5);
   position: absolute;
-  top: -35px;
+  top: -45px;
   right: 0;
 }
 .offcanvas .offcanvas-body .menu-card {

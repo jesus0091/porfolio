@@ -51,19 +51,20 @@ header {
 }
 
 .offcanvas {
-    border-radius: 10px;
-    margin: 20px;
-    background: rgba($lightness, 0.7);
-    backdrop-filter: blur(5px);
     border: none;
-    // overflow: visible;
-    transition: 0.5s ease all;
-
+    overflow: visible;
+    background: none;
+    height: 40vh;
+    padding: 20px;
+    
     .offcanvas-body {
+        border-radius: 10px;
+        background: rgba($lightness, 0.7);
+        backdrop-filter: blur(5px);
         padding: 1rem 3rem;
-        height: 35vh;
         position: relative;
         overflow: visible;
+        
 
         .oc-list-item {
             @include m-display (flex, row, center, center);
@@ -99,13 +100,14 @@ header {
         .oc-button {
             @include m-display (flex, row, center, center);
             border-radius: 100px;
-
+            width: 35px;
+            height: 35px;
             background: none;
             border: none;
             font-size: 30px;
-            color: rgba($darkness, 0.5);
+            color: rgba($lightness, 0.5);
             position: absolute;
-            top: -$size-button + 10px;
+            top: -$size-button;
             right: 0;
         }
 

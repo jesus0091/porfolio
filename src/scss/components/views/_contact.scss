@@ -32,7 +32,7 @@
         padding: 4rem 0;
 
         .contact-title{
-            @include m-text($s-text-supertitle * 1.5, 900, 1.15, 1.75px, transparent);
+            @include m-text($s-text-supertitle * 1.5, 800, 1.15, 1.75px, transparent);
             -webkit-text-stroke: 1px $lightness;
             transition: .5s color;
         }
