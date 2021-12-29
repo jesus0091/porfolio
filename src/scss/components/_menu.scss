@@ -47,31 +47,54 @@ header {
         }
     }
 
-
 }
 
 .offcanvas {
     border: none;
     overflow: visible;
     background: none;
-    height: 40vh;
-    padding: 20px;
+    height: 45vh;
+    transition: .75s ease all;
     
     .offcanvas-body {
-        border-radius: 10px;
-        background: rgba($lightness, 0.7);
-        backdrop-filter: blur(5px);
-        padding: 1rem 3rem;
-        position: relative;
-        overflow: visible;
-        
+        @include m-display (flex, column, stretch, start);
+        overflow: hidden;
+        padding: 0;
+        margin: 20px;
+
+        .oc-corner {
+            @include m-display (flex, row, space-between, start);
+            margin-bottom: 5px;
+
+            .oc-c {
+                width: 10px;
+                height: 10px;
+                margin: 3px;
+                border-radius: 1000px;
+                background: orange
+            }
+        }
+
+        .oc-panel {
+            @include m-display (flex, column, space-between, center);
+            background: rgba($lightness, 0.7);
+            backdrop-filter: blur(5px);
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden
+
+        }
 
         .oc-list-item {
             @include m-display (flex, row, center, center);
             flex-wrap: wrap;
+            flex: 1;
+            width: 100%;
             list-style: none;
-            padding: 0;
+            padding: 1.25rem;
             margin: 0;
+            
 
             .oc-item {
                 @include m-display (flex, column, center, center);
@@ -100,45 +123,11 @@ header {
         .oc-button {
             @include m-display (flex, row, center, center);
             border-radius: 100px;
-            width: 35px;
-            height: 35px;
             background: none;
             border: none;
-            font-size: 30px;
+            font-size: 1rem;
             color: rgba($lightness, 0.5);
-            position: absolute;
-            top: -$size-button;
-            right: 0;
         }
-
-        .menu-card {
-            background: $lightness;
-            width: max-content;
-            border-radius: 50px;
-            @include m-display(flex, row, center, center);
-            padding: .5rem;
-
-            .card-img-s  {
-                    @include m-display(flex, row, center, center);
-                    background: linear-gradient(45deg, rgb(255, 0, 0), orange);
-                    height: $size-button + 6px;
-                    width: $size-button + 6px;
-                    border-radius: 1000px;
-
-                    .img-border-s {
-                        width: $size-button;
-                        height: $size-button;
-                        border-radius: 1000px;
-                        background: $lightness;
-                    }
-            }      
-                
-            .card-body-s{
-                @include m-text($s-text*1.5, bold, 1.25, 0.5px, $darkness );
-                padding: 0 0.5rem;
-            }
-        }
-
     }
 }
 
