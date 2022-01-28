@@ -44,7 +44,7 @@
 
             span {
                 font-size: 280px;
-                color: #e19c4d3b;
+                color: #e19c4d28;
                 position: relative;
                 text-align: end;
                 line-height: 1;
@@ -53,15 +53,15 @@
 
         }
 
-        &::after {
-            position: absolute;
-            content: '';
-            background: #e19c4d18;
-            width: 100%;
-            height: 2px;
-            top: calc(40px/2);
-            transform: translateX(-102%);
-        }
+        // &::after {
+        //     position: absolute;
+        //     content: '';
+        //     background: #e19c4d18;
+        //     width: 100%;
+        //     height: 2px;
+        //     top: calc(40px/2);
+        //     transform: translateX(-102%);
+        // }
 
         @media (min-width: 992px) {
 
