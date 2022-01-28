@@ -41,10 +41,10 @@ html {
   color: #ffa438;
   border: 3px solid #ffa438;
   border-radius: 50px;
-  height: 34px;
+  height: 36px;
   width: max-content;
   padding: 0.25rem 0.75rem;
-  margin: 10px 0 20px;
+  margin: 10px 0;
   background: none;
   text-decoration: none;
   cursor: pointer;
@@ -61,13 +61,6 @@ html {
     color: #ffa438;
     height: 51px;
   }
-}
-
-.btn-mobile {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
 /*_________________ SCROLLBAR __________________*/
@@ -298,6 +291,10 @@ body::-webkit-scrollbar-thumb {
   width: 80%;
 }
 
+.paneltop {
+  padding-top: 4rem;
+}
+
 .a-about .a-about-description {
   display: flex;
   flex-direction: column;
@@ -329,13 +326,24 @@ body::-webkit-scrollbar-thumb {
   grid-auto-rows: 1fr;
   justify-items: center;
   align-items: center;
-  padding: 2rem;
+  padding: 3rem 2rem 2rem;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 .a-about .grid-skills img {
   width: 100%;
+}
+.a-about .grid-skills .title-up {
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.1);
 }
 @media (min-width: 992px) {
   .a-about .a-about-description {
@@ -379,12 +387,34 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-.s-w {
+.btn-mobile {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-end;
   align-items: center;
 }
+.btn-mobile .bt-corner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  margin-right: 5px;
+}
+.btn-mobile .bt-corner span {
+  width: 10px;
+  height: 10px;
+  margin: 3px;
+  border-radius: 1000px;
+  background: #ffa438;
+  opacity: 0.5;
+}
+.btn-mobile .bt-corner span:nth-child(2) {
+  background: #ff3c00;
+}
+.btn-mobile .bt-corner span:nth-child(3) {
+  background: #007ef5;
+}
+
 .s-w .s-w-title {
   font-size: 30px;
   font-weight: bold;
@@ -400,8 +430,6 @@ body::-webkit-scrollbar-thumb {
   flex-wrap: wrap;
   gap: 10px;
   width: 100%;
-  max-width: 800px;
-  box-sizing: content-box;
 }
 .s-w .s-w-grid .s-w-card {
   width: 48%;
@@ -413,6 +441,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 7px;
   background: rgba(255, 164, 56, 0.1);
   position: relative;
+  transition: 2s ease all;
 }
 .s-w .s-w-grid .s-w-card h3 {
   font-size: 15px;
@@ -435,10 +464,6 @@ body::-webkit-scrollbar-thumb {
 .s-w .s-w-grid .s-w-card:hover {
   background: linear-gradient(45deg, white -10%, #ffa438 50%, #ff3c00 180%);
   transition: 2s ease all;
-}
-.s-w .s-w-grid .w-c-1,
-.s-w .s-w-grid .w-c-3 {
-  transform: translateY(40%);
 }
 
 .panel-int {

@@ -3,10 +3,10 @@
     @include m-text ($s-text-title, bold, 1, 2px, $orange);
     border: 3px solid $orange;
     border-radius: 50px;
-    height: $s-text-title + 14px;
+    height: $s-text-title + 16px;
     width: max-content;
     padding: 0.25rem 0.75rem;
-    margin: 10px 0 20px;
+    margin: 10px 0;
     background: none;
     text-decoration: none;
     cursor: pointer;
@@ -19,8 +19,4 @@
         @include m-text ($s-text-title * 1.75, bold, 1, 2px, $orange);
         height: (($s-text-title * 1.75) + 16px);
     }
-}
-
-.btn-mobile {
-    @include m-display (flex, row, center, center);
 }

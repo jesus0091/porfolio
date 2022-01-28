@@ -1,5 +1,6 @@
 .s-w {
-    @include m-display(flex, column, center, center);
+    // @include m-display(flex, column, center, center);
+    // width: 100%;
 
     .s-w-title {
         @include m-text ($s-text-supertitle, bold, 1.5, 1.5px, $orange);
@@ -11,8 +12,6 @@
         flex-wrap: wrap;
         gap: 10px;
         width: 100%;
-        max-width: 800px;
-        box-sizing: content-box;
 
         .s-w-card {
             width: 48%;
@@ -21,7 +20,7 @@
             border-radius: 7px;
             background: rgba($orange, 0.1);
             position: relative;
-            // transition: 2s ease all;
+            transition: 2s ease all;
             
 
             h3 {
@@ -48,10 +47,10 @@
             }
         }
 
-        .w-c-1,
-        .w-c-3 {
-            transform: translateY(40%);
-        }
+        // .w-c-1,
+        // .w-c-3 {
+        //     transform: translateY(40%);
+        // }
     }
 }
 

@@ -1,3 +1,7 @@
+.paneltop {
+    padding-top: 4rem;
+}
+
 .a-about {
 
     .a-about-description {
@@ -16,6 +20,7 @@
         }
     
     }
+
     .grid-skills {
         display: grid;
         grid-gap: 10px;
@@ -23,14 +28,26 @@
         grid-auto-rows: 1fr;
         justify-items: center;
         align-items: center;
-        padding: 2rem;
+        padding: 3rem 2rem 2rem;
         background-color: rgba(255 255 255 / 0.1);
         border-radius: 20px;
         height: 100%;
+        position: relative;
+        overflow: hidden;
 
 
         img {
             width: 100%;
+        }
+
+        .title-up {
+            position: absolute;
+            top: .5rem;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            color: rgba(255 255 255 / 0.1);
         }
     }
 
@@ -71,4 +88,29 @@
         
     }
 
+}
+.btn-mobile {
+    @include m-display (flex, row, flex-end, center);
+    
+    .bt-corner {
+        @include m-display (flex, row, space-between, start);
+        margin-right: 5px;
+    
+        span {
+            width: 10px;
+            height: 10px;
+            margin: 3px;
+            border-radius: 1000px;
+            background: $orange;
+            opacity: .5;
+    
+            &:nth-child(2) {
+                background: $color-red;
+            }
+    
+            &:nth-child(3) {
+                background: $color-blue;
+            }
+        }
+    }
 }
